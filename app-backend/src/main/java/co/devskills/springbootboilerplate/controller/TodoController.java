@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/todos")
+@CrossOrigin(origins = "http://localhost:3000")
 public class TodoController {
     @Autowired
     TodoService todoService;
@@ -15,6 +16,7 @@ public class TodoController {
 
     @PostMapping("/")
     public Todo createTodo(@RequestBody Todo todo) {
+
         return todoService.createTodo(todo);
     }
 
