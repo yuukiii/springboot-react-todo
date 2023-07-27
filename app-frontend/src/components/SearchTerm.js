@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { FaUser, FaLock } from "react-icons/fa";
 import searchTerm from "../api/searchTerm";
+import AddUserTodo from "./AddUserTodo"
 
 export default function SearchTerm(){
     const [todo, searchTodo] = useState();
@@ -65,6 +66,9 @@ export default function SearchTerm(){
             </form>
             <div>
                 <a href={todo} > {searchResult}</a>
+            </div>
+            <div>
+                <AddUserTodo/>
             </div>
         </div>
     );
