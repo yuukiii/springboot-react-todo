@@ -5,7 +5,7 @@ A backbone for your coding challenge.
 ## Contents
 
 - [Backend service](app-backend) - a Java/Spring Boot service with a `/ping` endpoint. Extend with your code.
-- [Frontend app](app-frontend-vue) - a Vue 3/TS/Vite app. Extend with your code.
+- [Frontend app](app-frontend) - a React app. Extend with your code.
 - [E2E test suites](cypress/integration) - a backend and a frontend Cypress test suites. Extend with your tests.
 - [Pipeline](.github/workflows/tests.yml) - a test Runner that executes the Cypress tests on push to a branch other than `master`/`main`.
 
@@ -21,8 +21,7 @@ A backbone for your coding challenge.
 ### Frontend
 
 - React 17
-- Typescript
-- Vite
+- Typescript 
 
 ### Misc
 
@@ -39,18 +38,18 @@ A backbone for your coding challenge.
 
 ```bash
 npm install
-npm run build # both Java/Spring Boot backend and Vue frontend
+npm run build # both Java/Spring Boot backend and React frontend
 npm run build:backend # only Java/Spring Boot backend
-npm run build:frontend # only Vue frontend
+npm run build:frontend # only React frontend
 ```
 
 4. Start your app.
 
 ```bash
 npm install
-npm run start # both Java/Spring Boot backend and Vue frontend
+npm run start # both Java/Spring Boot backend and react frontend
 npm run start:backend # only Java/Spring Boot backend
-npm run start:frontend # only Vue frontend
+npm run start:frontend # only React frontend
 ```
 
 ```bash
