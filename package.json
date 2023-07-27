@@ -1,5 +1,5 @@
 {
-  "name": "fullstack-boilerplate-ruby-vue",
+  "name": "fullstack-boilerplate-ruby-react",
   "version": "1.0.0",
   "scripts": {
     "build:backend": "cd app-backend && ./gradlew build",
@@ -7,6 +7,7 @@
     "build": "npm run build:backend && npm run build:frontend",
     "start:backend": "java -jar app-backend/build/libs/spring-boot-boilerplate-0.0.1-SNAPSHOT-plain.jar",
     "start:frontend": "cd app-frontend &&  npm run start",
+    "seed": "cd app-frontend &&  npm run seed",
     "start": "npm run start:backend & npm run start:frontend",
     "test": "cypress run"
   },
