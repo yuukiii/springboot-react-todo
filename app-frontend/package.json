@@ -12,6 +12,7 @@
     "@types/react-dom": "^17.0.0",
     "axios": "^1.4.0",
     "react": "^17.0.1",
+    "react-bootstrap": "^2.8.0",
     "react-dom": "^17.0.1",
     "react-icons": "^4.1.0",
     "react-lazy-load-image-component": "^1.5.1",
@@ -20,7 +21,7 @@
     "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "start": "react-scripts start && npm run seed",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "seed": "curl -X POST -H 'Content-Type: application/json' -d '{\"name\": \"John Doe\", \"email\": \"john.doe@example.com\"}' http://localhost:8080/users/ && curl -X POST -H 'Content-Type: application/json' -d '{\"description\":\"another1\",\"dueDate\":\"2023-07-28T00:00:00.000Z\", \"priority\":\"high\",\"user\" : {\"id\": 1, \"name\": \"John Doe\", \"email\": \"john.doe@example.com\" }' http://localhost:8080/todos/",

@@ -11,6 +11,6 @@ import java.util.Set;
 @Repository
 @Component
 public interface UserRepository extends CrudRepository<User, Long> {
-    Set<User> findByTodoItems_DescriptionContaining(String description);
+    Set<User> findByNameContaining(String description);
     Set<User> findByTodoItems_PriorityContaining(String priority);
 }

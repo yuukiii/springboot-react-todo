@@ -1,11 +1,14 @@
 package co.devskills.springbootboilerplate.service;
 
 
+import co.devskills.springbootboilerplate.model.Todo;
 import co.devskills.springbootboilerplate.model.User;
+import co.devskills.springbootboilerplate.repository.TodoRepository;
 import co.devskills.springbootboilerplate.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Service
@@ -13,6 +16,9 @@ public class UserService {
 
     @Autowired
     UserRepository userRepository;
+
+    @Autowired
+    TodoRepository todoRepository;
 
     public User createUser(User user) {
         return userRepository.save(user);
@@ -42,7 +48,12 @@ public class UserService {
     }
 
     public Set<User> findUsersByTodoDescription(String description) {
-        return userRepository.findByTodoItems_DescriptionContaining(description);
+        Set<Todo> setOfTodos = todoRepository.findByDescriptionContaining(description);
+        Set<User> userSet = new HashSet<>();
+        for( Todo todo : setOfTodos){
+            userSet.add( todo.getUser()) ;
+        }
+        return userSet;
     }
 
     public Set<User> findUsersByTodoPriority(String priority) {

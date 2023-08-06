@@ -29,6 +29,7 @@ public class TodoService {
             todo.setDescription(newTodo.getDescription());
             todo.setDueDate(newTodo.getDueDate());
             todo.setPriority(newTodo.getPriority());
+            todo.setStatus(newTodo.getStatus());
             return todoRepository.save(todo);
         }).orElseGet(() -> {
             newTodo.setId(id);
