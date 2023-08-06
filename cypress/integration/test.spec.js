@@ -13,8 +13,22 @@ describe('Backend Test Spec', () => {
   })
 })
 
-describe('Frontend Test Spec', () => {
-  it('should visit index', () => {
+describe('Should Search Test Spec', () => {
+  it('should search all', () => {
     cy.visit('/')
+  })
+
+})
+
+
+describe('Search Test Spec', () => {
+  it('should search all', () => {
+    cy.request({
+      failOnStatusCode: false,
+      method: 'GET',
+      url: `${apiUrl}/users/`,
+    }).then((response) => {
+      expect(response.status).to.eq(200)
+    })
   })
 })
