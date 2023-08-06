@@ -59,7 +59,6 @@ export default function SearchTerm() {
                             <div className="flex items-center">
                                 <label htmlFor="todo">Todo Description:</label>
                                 <input
-                                    required
                                     id="todo"
                                     type="text"
                                     placeholder="search"
