@@ -34,7 +34,7 @@ const AddUserTodo = () => {
     };
 
     return (
-        <Container>
+        <Row>
             <Row><h2>Add User with Todo Item</h2></Row>
             <Row>
                 <form onSubmit={handleSubmit}>
@@ -97,7 +97,7 @@ const AddUserTodo = () => {
                 }
 
             </ul>
-        </Container>
+        </Row>
     );
 };
 

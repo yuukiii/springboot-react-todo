@@ -14,7 +14,6 @@ const DeleteUserTodo = () => {
         const data = await deleteTodo(id);
         console.log(data);
 
-
     };
 
     return (
