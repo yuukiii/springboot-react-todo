@@ -2,6 +2,8 @@ package co.devskills.springbootboilerplate.controller;
 
 import co.devskills.springbootboilerplate.model.User;
 import co.devskills.springbootboilerplate.service.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,12 +14,17 @@ import java.util.Set;
 @CrossOrigin(origins = "http://localhost:3000")
 public class UserController {
 
+    private static final Logger log = LoggerFactory.getLogger(UserController.class);
+
+
     @Autowired
     UserService userService;
 
+
+
     @PostMapping("/")
     public User createUser(@RequestBody User user) {
-
+        log.info("user id: " + user.getId() + " user name: " + user.getName());
         return userService.createUser(user);
     }
 
@@ -43,6 +50,7 @@ public class UserController {
 
     @GetMapping("/search")
     public Set<User> findUsersByTodoDescription(@RequestParam String description) {
+
         return userService.findUsersByTodoDescription(description);
     }
 }

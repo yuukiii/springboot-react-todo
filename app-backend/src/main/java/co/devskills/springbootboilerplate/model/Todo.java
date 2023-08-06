@@ -12,6 +12,7 @@ public class Todo {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String description;
+    private String status;
     private LocalDate dueDate;
     private String priority; // could be represented as an Enum, if there are fixed priority levels
 
@@ -48,6 +49,14 @@ public class Todo {
 
     public String getPriority() {
         return priority;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public void setPriority(String priority) {
